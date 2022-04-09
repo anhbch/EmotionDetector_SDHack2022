@@ -39,7 +39,7 @@ function gotFaces(error, result) {
     return;
   }
 
-  detections = result;　//Now all the data in this detections: 
+  detections = result;//Now all the data in this detections: 
   // console.log(detections);
 
   clear();//Draw transparent background;: 
