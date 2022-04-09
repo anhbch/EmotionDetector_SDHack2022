@@ -1,6 +1,5 @@
 let faceapi;
 let detections = [];
-
 let video;
 let canvas;
 
