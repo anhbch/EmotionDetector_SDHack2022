@@ -19,3 +19,15 @@ body {
   border: 3px #fff solid;
 	border-radius: 10px;
 }
+
+/*--------------------------*/
+
+#container{
+  border: 2px solid red;
+  border-radius: 25px;
+  margin-top: 300px;
+  margin-left: 1000px;
+  width: 25%;
+  height: 10%;
+}
+
