@@ -24,10 +24,10 @@ function setup() {
 }
 
 function faceReady() {
-  faceapi.detect(gotFaces);// Start detecting faces: 顔認識開始
+  faceapi.detect(gotFaces);// Start detecting faces:
 }
 
-// Got faces: 顔を検知
+// Got faces:
 function gotFaces(error, result) {
   if (error) {
     console.log(error);
@@ -73,7 +73,7 @@ function drawLandmarks(detections){
 function drawExpressions(detections, x, y, textYSpace){
   if(detections.length > 0){//If at least 1 face is detected: 
     let {neutral, happy, angry, sad, disgusted, surprised, fearful} = detections[0].expressions;
-    textFont('Helvetica Neue');
+    textFont('Helvetica Neue');
     textSize(14);
     noStroke();
     fill(44, 169, 225);
