@@ -1,3 +1,4 @@
+
 let faceapi;
 let detections = [];
 let video;
@@ -69,7 +70,14 @@ function drawLandmarks(detections){
   }
 }
 
-function drawExpressions(detections, x, y, textYSpace){
+/**
+ * Helper function: Draw expression
+ * @param {*} detections 
+ * @param {*} x 
+ * @param {*} y 
+ * @param {*} textYSpace 
+ */
+async function drawExpressions(detections, x, y, textYSpace){
   if(detections.length > 0){//If at least 1 face is detected: 
     let {neutral, happy, angry, sad, disgusted, surprised, fearful} = detections[0].expressions;
     textFont('Helvetica Neue');
@@ -84,6 +92,21 @@ function drawExpressions(detections, x, y, textYSpace){
     // text("disgusted: " + nf(disgusted*100, 2, 2)+"%", x, y+textYSpace*4);
     // text("surprised:  " + nf(surprised*100, 2, 2)+"%", x, y+textYSpace*5);
     // text("fear:           " + nf(fearful*100, 2, 2)+"%", x, y+textYSpace*6);
+
+    /**
+     * Collect and send emotion data
+     */
+    const data = {happy, angry, sad};
+    const options ={
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }
+    const response = await fetch('/api', options);
+    const json = await response.json();
+    console.log(json);
   }else{//If no faces is detected:
     text("neutral: ", x, y);
     text("happiness: ", x, y + textYSpace);
