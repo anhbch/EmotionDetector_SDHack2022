@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <title>face-api</title>
+  <script type = "text/javascript" src="calculator.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/ml5js/Intro-ML-Arts-IMA@ml5-build-10-7-19/ml5_build/ml5.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
   <meta charset="utf-8" />
 </head>
 
@@ -19,9 +20,9 @@
     <script src="intro.js"></script>
   </div>
 
-  <div class="cam">
+  <!-- <div class="cam">
     <script src="sketch.js"></script>
-  </div>
+  </div> -->
   <div id="chart-container">
     <canvas id="emotion-bar"></canvas>
     <script src="chart.js"></script>
@@ -37,7 +38,7 @@
       <h1> Eemodoro </h1>
     </div>
   </div>
-  
+
   <div class = "container">
     <div class = "leftbox">
       <div class= "subgrid">
@@ -48,15 +49,15 @@
         <div class = "button"> 
           <button onclick="stop()"> STOP </button>
         </div>
-
         <div class = "button"> 
-          <button onclick="start()"> RESET </button> 
+          <button onclick = "change()"> RESET </button> 
         </div>
-       
+        <button onclick="change()"> change</button>
+
+        <p id="demo" onclick="change()">Click me.</p>
+        <script>console.log("ahihi")</script>
       </div>
     </div>
   </div>
-
 </body>
-
 </html>
