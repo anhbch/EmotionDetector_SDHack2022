@@ -61,7 +61,6 @@ function gotFaces(error, result) {
   drawBoxs(detections);//Draw detection box: 
   drawLandmarks(detections);//// Draw all the face points: 
   drawExpressions(detections, 20, 250, 14);//Draw face expression:
-  //getData();
   faceapi.detect(gotFaces);// Call the function again at here:
 }
 
@@ -106,14 +105,6 @@ async function drawExpressions(detections, x, y, textYSpace){
     textSize(14);
     noStroke();
     fill(44, 169, 225);
-
-    // text("neutral:       " + nf(neutral*100, 2, 2)+"%", x, y);
-    // text("happiness: " + nf(happy*100, 2, 2)+"%", x, y+textYSpace);
-    // text("anger:        " + nf(angry*100, 2, 2)+"%", x, y+textYSpace*2);
-    // text("sad:            "+ nf(sad*100, 2, 2)+"%", x, y+textYSpace*3);
-    // text("disgusted: " + nf(disgusted*100, 2, 2)+"%", x, y+textYSpace*4);
-    // text("surprised:  " + nf(surprised*100, 2, 2)+"%", x, y+textYSpace*5);
-    // text("fear:           " + nf(fearful*100, 2, 2)+"%", x, y+textYSpace*6);
     /**
      * Update bar chart data
      */
@@ -125,11 +116,11 @@ async function drawExpressions(detections, x, y, textYSpace){
     /**
      * local storage
      */
-    if(happy >= 0.20){
+    if(happy >= 0.05){
       happy_count += 1;
       happy_sum += happy;
     }
-    if(sad >= 0.20){
+    if(sad >= 0.05){
       sad_count += 1;
       sad_sum += sad;
     }
@@ -161,13 +152,6 @@ async function drawExpressions(detections, x, y, textYSpace){
   }
 }
 
-/**
- * Helper function: Get Data
- */
-async function getData(){
-  const response = await fetch('/api');
-  const data = await response.json();
-}
 
 /**
  * Helper Function: update bar chart data
