@@ -79,9 +79,7 @@ body {
     grid-template-columns: subgrid;
     justify-content: center;
 	  align-items: center;
-    padding: 30px 150px;
   }
-
   .button {
     background-color: #e7717d;
     border: 0;
@@ -93,6 +91,8 @@ body {
     font-size: 16px;
     /*box-shadow: 0 1px 2px 0 rgba(59, 59, 59, 0.19), 0 1px 2px 0 rgba(59, 59, 59, 0.19); */
     border-radius: 8px;
+
+    
   }
 /* flex-grow: 1;
   flex-shrink: 1;
