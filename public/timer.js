@@ -61,7 +61,7 @@ function startTimer(duration, display) {
 };
 
 function start() {
-    var time = 10; // your time in seconds here
+    var time = 30*60; // your time in seconds here
     display = document.querySelector('#clock');
     localStorage.clear();
     startTimer(time, display);
