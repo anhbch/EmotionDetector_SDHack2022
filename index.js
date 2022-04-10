@@ -16,6 +16,16 @@ app.use(express.json({ limit: '50mb'}));
 const database = new Datastore('database.db');
 database.loadDatabase();
 
+app.get('/api',(request, response) => {
+    database.find({},(err,data)=>{
+        if(err){
+            response.end();
+            return;
+        }
+        response.json(data);
+    })
+});
+
 app.post('/api',(request, response) => {
     console.log(request.body);
     const data = request.body;

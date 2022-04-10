@@ -8,7 +8,7 @@ body {
 #canvas{
   position: absolute;
   top: 50%;
-  left: 57%;
+  left: 60%;
   transform: translate(-50%, -50%);
   z-index:1;
 }
@@ -16,16 +16,21 @@ body {
 #video{
   position: absolute;
   top: 50%;
-  left: 57%;
+  left: 60%;
   transform: translate(-50%, -50%);
   z-index:0;
   border: 3px #fff solid;
 	border-radius: 10px;
 }
 
-/* 
- * Style for boxes
- */
+#chart-container{
+  position:absolute;
+  width: 20%;
+  height: 25%;
+  margin-left: 1440px;
+  top:50%;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -97,3 +102,22 @@ body {
 /* flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 50%; */
+
+
+  @media only screen and (max-width:1440px) {
+    #canvas{
+      top: 50%;
+      left: 50%;
+    }
+    #video{
+      top: 50%;
+      left: 50%;
+    }
+    #chart-container{
+      position:absolute;
+      width: 30%;
+      height: 50%;
+      margin-left: 980px;
+      top:48%;
+    }
+   }
