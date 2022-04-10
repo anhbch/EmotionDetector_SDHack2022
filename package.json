@@ -3,5 +3,8 @@
     "cloudflare-express": "^1.0.1",
     "nedb": "^1.8.0",
     "nrdb": "^1.0.2"
+  },
+  "scripts": {
+    "build": "parcel build src/index.html"
   }
 }

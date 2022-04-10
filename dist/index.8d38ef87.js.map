@@ -1,0 +1,1 @@
+{"mappings":"AAAA,SAASA,cACLC,SAASC,eAAe,WAAWC,UAAUC,OAAO","sources":["public/popup.js"],"sourcesContent":["function togglePopup(){\n    document.getElementById(\"popup-1\").classList.toggle(\"active\");\n}"],"names":["togglePopup","document","getElementById","classList","toggle"],"version":3,"file":"index.8d38ef87.js.map"}
