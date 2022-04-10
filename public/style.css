@@ -223,7 +223,6 @@ body {
     transition: all 0.5s;
   }
    
-  /*
   @keyframes fadeIn{
     to {
       opacity: 1;
@@ -231,6 +230,7 @@ body {
   }
    
   .fade-in{
-    opacity: 0;
+    opacity: 1;
     animation: fadeIn 1s ease-in fowards;
+  }
   
