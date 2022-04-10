@@ -3,7 +3,7 @@ let faceapi;
 let detections = [];
 let video;
 let canvas;
-
+let faceOptions;
 function setup() {
   canvas = createCanvas(480, 360);
   canvas.id("canvas");
@@ -12,7 +12,7 @@ function setup() {
   video.id("video");
   video.size(width, height);
 
-  const faceOptions = {
+  faceOptions = {
     withLandmarks: true,
     withExpressions: true,
     withDescriptors: true,
@@ -22,13 +22,19 @@ function setup() {
   //Initialize the model:
   faceapi = ml5.faceApi(video, faceOptions, faceReady);
 }
+/**
+ * Main function: Start detecting face and emotion
+ */
+function start(){
+  faceapi = ml5.faceApi(video, faceOptions, faceReady);
+}
 
 function faceReady() {
   faceapi.detect(gotFaces);// Start detecting faces:
 }
 
 /**
- * Main recursive funtion
+ * recursive funtion
  * @param {*} error 
  * @param {*} result 
  * @returns 
