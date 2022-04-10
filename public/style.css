@@ -89,6 +89,17 @@ body {
   font-family: serif;
  }
 
+ #emotion {
+  color: #ac3b61;
+  font-family: serif;
+  text-align: center;
+ }
+ p {
+  color: #ac3b61;
+  font-family: serif;
+  text-align: center;
+ }
+
 
 /* =======================================
  * Buttons style 
