@@ -78,10 +78,15 @@ body {
  }
 
  h2 {
-  color: #e7717d;
+  color: #ac3b61;
   font-size: xx-large;
   font-family: serif;
   text-align: center;
+ }
+
+ ul {
+  color: #ac3b61;
+  font-family: serif;
  }
 
 
@@ -194,7 +199,7 @@ body {
   width:450px;
   height: 500px;
   z-index:2;
-  text-align:center;
+  /* text-align:center; */
   padding:20px;
   box-sizing:border-box;
 }
