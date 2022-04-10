@@ -35,9 +35,7 @@ function start() {
 
 function reset() {
     clearInterval(myInterval);
-    var time = 30 * 60, // your time in seconds here
-    display = document.querySelector('#clock');
-    startTimer(time, display);
+    document.getElementById("clock").innerHTML = '30:00';
 };
 
 
