@@ -25,7 +25,7 @@ function startTimer(duration, display) {
             clearInterval(timer);
 
             //Call getDomEmotion
-            
+            let domEmotion = getDomEmotion();
         }
     }, 1000);
 };
