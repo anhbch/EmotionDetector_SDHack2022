@@ -76,13 +76,13 @@ body {
    font-weight: bold;
    font-family: monospace;
  }
-/* 
+
  h2 {
   color: #e7717d;
   font-size: xx-large;
   font-family: serif;
   text-align: center;
- } */
+ }
 
 
 /* =======================================
@@ -192,7 +192,7 @@ body {
   transform:translate(-50%,-50%) scale(0);
   background:#ffff;
   width:450px;
-  height:250px;
+  height: 500px;
   z-index:2;
   text-align:center;
   padding:20px;
