@@ -35,7 +35,6 @@ function start() {
 
 function pause() {
     clearInterval(myInterval);
-    // document.getElementById("clock").innerHTML = '30:00';
 };
 
 function reset() {
