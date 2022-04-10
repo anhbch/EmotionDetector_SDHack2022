@@ -1,5 +1,6 @@
 body {
   background-color: #ffe8de;
+  z-index: 0;
 }
 
 
@@ -90,9 +91,10 @@ body {
     justify-content: center;
 	  align-items: center;
     grid-gap: 16px;
+    z-index: 0;
   }
 
-  .box {
+  /* .box {
     background-color: #edc7b7;
     border: 0;
     color: white;
@@ -100,21 +102,23 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-  }
+  } */
 
   button {
-    /* background-color: #e7717d;
+    background-color: #e7717d;
     text-align: center;
     font-size: 16px;
     color: white;
     padding: 10px 70px;
     border: 0;
-    display: inline-block;
+    display: block;
     font-size: 16px;
     box-shadow: 0 1px 2px 0 rgba(59, 59, 59, 0.19), 0 1px 2px 0 rgba(59, 59, 59, 0.19); 
     border-radius: 8px;
     font-size: x-large;
-    font-family: serif; */
+    font-family: serif;
+    cursor: pointer; 
+    z-index: 3;
   }
 
 
@@ -207,6 +211,7 @@ body {
     color: rgb(219, 53, 53);
     text-align: center;
     line-height: 90vh;
+    z-index: 0;
   }
    
   .splash.display-none{
@@ -222,6 +227,7 @@ body {
     text-align: center;
     line-height: 90vh;
     transition: all 0.5s;
+    z-index: 0;
   }
    
   @keyframes fadeIn{
