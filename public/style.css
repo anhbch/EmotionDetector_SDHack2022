@@ -2,13 +2,11 @@ body {
   background-color: #ffe8de;
 }
 
-/* 
- * Style for video display
- */
+
 #canvas{
   position: absolute;
   top: 50%;
-  left: 60%;
+  left: 20%;
   transform: translate(-50%, -50%);
   z-index:1;
 }
@@ -16,7 +14,7 @@ body {
 #video{
   position: absolute;
   top: 50%;
-  left: 60%;
+  left: 20%;
   transform: translate(-50%, -50%);
   z-index:0;
   border: 3px #fff solid;
@@ -103,21 +101,23 @@ body {
   flex-shrink: 1;
   flex-basis: 50%; */
 
-
+/*
+ * Style for chart and video display
+ */
   @media only screen and (max-width:1440px) {
     #canvas{
       top: 50%;
-      left: 50%;
+      left: 45%;
     }
     #video{
       top: 50%;
-      left: 50%;
+      left: 45%;
     }
     #chart-container{
       position:absolute;
       width: 30%;
       height: 50%;
-      margin-left: 980px;
+      margin-left: 850px;
       top:48%;
     }
-   }
+  }
