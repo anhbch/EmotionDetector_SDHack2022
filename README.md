@@ -26,8 +26,8 @@ We are happy since we know how to absorb knowledge fast as well as comprehensive
 We learn to develop the workflow with git. We also gain insight into app development. Importantly, we learn how to stay calm while debugging.
 
 ## What's next for Eemodoro
-Implement the option to turn on/off the camera
-Add activities suggestion based on the emotions
-Add more features (maybe more emotions)
-Use more effective libraries
-Implement database
+* Implement the option to turn on/off the camera
+* Add activities suggestion based on the emotions
+* Add more features (maybe more emotions)
+* Use more effective libraries
+* Implement database
