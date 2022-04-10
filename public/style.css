@@ -1,7 +1,10 @@
 body {
-  background-color: #FFE8DE;
+  background-color: #ffe8de;
 }
 
+/* 
+ * Style for video display
+ */
 #canvas{
   position: absolute;
   top: 50%;
@@ -36,43 +39,85 @@ body {
 
 .leftbox {
   float: left;
-  width: 20%;
+  width: 15%;
   height: 100vh;
   padding: 0;
   display: flex;
 	justify-content: center;
 	align-items: center;
-  background-color: #edc7b7
+  background-color: #edc7b7;
+  box-shadow: 0 1px 2px 0 rgba(59, 59, 59, 0.19), 0 1px 2px 0 rgba(59, 59, 59, 0.19); 
+  
 }
 
 .topbox {
   float: top ;
-  width: 80%;
-  height: 15vh;
+  width: 85%;
+  height: 10vh;
   padding: 0;
   display: flex;
 	justify-content: center;
 	align-items: center;
-  background-color: #e7717d
+  background-color: #e7717d;
+  box-shadow: 0 1px 2px 0 rgba(59, 59, 59, 0.19), 0 1px 2px 0 rgba(59, 59, 59, 0.19); 
 }
 
+/*
+ * Style for texts
+ */
+ h1 {
+   color: #fff;
+   font-size: 50px;
+   font-weight: bold;
+   font-family: monospace;
+ }
+
+ /*
+  * Style for buttons
+  */
+  .grid {
+    display : grid;
+  }
+   
+  .subgrid {
+    display : grid;
+    grid-template-columns: subgrid;
+    justify-content: center;
+	  align-items: center;
+    padding: 30px 150px;
+  }
+
+  .button {
+    background-color: #e7717d;
+    border: 0;
+    color: white;
+    padding: 20px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /*box-shadow: 0 1px 2px 0 rgba(59, 59, 59, 0.19), 0 1px 2px 0 rgba(59, 59, 59, 0.19); */
+    border-radius: 8px;
+  }
 /* flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 50%; */
- @media only screen and (max-width:1440px) {
-  #canvas{
-    top: 50%;
-    left: 50%;
-  }
-  #video{
-    top: 50%;
-    left: 50%;
-  }
-  #chart-container{
-    position:absolute;
-    width: 30%;
-    height: 50%;
-    margin-left: 980px;
-    top:48%;
-  }
- }
+
+
+  @media only screen and (max-width:1440px) {
+    #canvas{
+      top: 50%;
+      left: 50%;
+    }
+    #video{
+      top: 50%;
+      left: 50%;
+    }
+    #chart-container{
+      position:absolute;
+      width: 30%;
+      height: 50%;
+      margin-left: 980px;
+      top:48%;
+    }
+   }
