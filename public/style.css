@@ -116,16 +116,22 @@ body {
     text-align: center;
     font-size: 16px;
     color: white;
-    padding: 10px 70px;
+    padding: 10px 50px;
+    width: 85%;
+    justify-self: center;
+	  align-self: center;
+    justify-content: center;
+	  align-items: center;
     border: 0;
     display: block;
-    font-size: 16px;
+    font-size: 15px;
     box-shadow: 0 1px 2px 0 rgba(59, 59, 59, 0.19), 0 1px 2px 0 rgba(59, 59, 59, 0.19); 
     border-radius: 8px;
     font-size: x-large;
     font-family: serif;
     cursor: pointer; 
     z-index: 3;
+    
   }
 
 
