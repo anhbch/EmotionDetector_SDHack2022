@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Eemodoro</title>
+  <script src="popup.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/ml5js/Intro-ML-Arts-IMA@ml5-build-10-7-19/ml5_build/ml5.min.js"></script>
@@ -34,14 +35,13 @@
   <div id="timeBox">
     <span id="clock">30:00</span>
     <script src="timer.js"></script>
-  </div>  
-
+  </div>
   <div class = "container">
     <div class = "topbox">
       <h1> Eemodoro </h1>
     </div>
   </div>
-  
+
   <div class = "container">
     <div class = "leftbox">
       <div class= "subgrid">
@@ -49,11 +49,18 @@
         <button type="button" onclick="start()"> START </button>
         <button type="button" onclick="pause()"> PAUSE </button>
         <button type="button" onclick="reset()"> RESET </button>
-       
+        <button onclick="togglePopup()">Show Result</button>
       </div>
+    </div>
+  </div>
+  <div class = "popup" id="popup-1">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class = "close-btn">&times;</div>
+      <h1>Title</h1>
+      <p>Some Text</p>
     </div>
   </div>
 
 </body>
-
 </html>
