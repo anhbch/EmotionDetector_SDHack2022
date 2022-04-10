@@ -110,19 +110,27 @@ async function drawExpressions(detections, x, y, textYSpace){
      */
     updateData(nf(happy*100, 2, 2),nf(sad*100, 2, 2),nf(angry*100, 2, 2));
     /**
-     * Collect and send emotion data
+     * Collect emotion data
      */
     const data = {happy, angry, sad};
-    const options ={
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    }
-    const response = await fetch('/api', options);
-    const json = await response.json();
-    console.log(json);
+    localStorage.setItem("happy",nf(happy*100, 2, 2));
+    localStorage.setItem("sad",nf(sad*100, 2, 2));
+    localStorage.setItem("angry",nf(angry*100, 2, 2));
+
+    /**
+     * local storage
+     */
+    localStorage.
+    // const options ={
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(data)
+    // }
+    // const response = await fetch('/api', options);
+    // const json = await response.json();
+    // console.log(json);
   }else{//If no faces is detected:
     // text("neutral: ", x, y);
     // text("happiness: ", x, y + textYSpace);
