@@ -9,15 +9,22 @@ function startTimer(duration, display) {
 
         display.textContent = minutes + ":" + seconds;
 
-        if (--timer < 0) {
-            timer = 0;
-            //timer = duration; // uncomment this line to reset timer automatically after reaching 0
-        }
-    }, 1000);
+        timer--;
+        if (timer >= 0) {
+            span = document.getElementById("clock");
+            span.innerHTML = counter;
+          }
+          if (timer === 0) {
+              alert('sorry, out of time');
+              clearInterval(timer);
+          }
+        }, 1000);
 }
 
-window.onload = function () {
+window.onload = function start() {
     var time = 30 * 60, // your time in seconds here
         display = document.querySelector('#clock');
     startTimer(time, display);
 };
+
+
