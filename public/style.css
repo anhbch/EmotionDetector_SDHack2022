@@ -2,13 +2,11 @@ body {
   background-color: #ffe8de;
 }
 
-/* 
- * Style for video display
- */
+
 #canvas{
   position: absolute;
   top: 50%;
-  left: 60%;
+  left: 20%;
   transform: translate(-50%, -50%);
   z-index:1;
 }
@@ -16,7 +14,7 @@ body {
 #video{
   position: absolute;
   top: 50%;
-  left: 60%;
+  left: 20%;
   transform: translate(-50%, -50%);
   z-index:0;
   border: 3px #fff solid;
@@ -84,9 +82,7 @@ body {
     grid-template-columns: subgrid;
     justify-content: center;
 	  align-items: center;
-    padding: 30px 150px;
   }
-
   .button {
     background-color: #e7717d;
     border: 0;
@@ -98,26 +94,30 @@ body {
     font-size: 16px;
     /*box-shadow: 0 1px 2px 0 rgba(59, 59, 59, 0.19), 0 1px 2px 0 rgba(59, 59, 59, 0.19); */
     border-radius: 8px;
+
+    
   }
 /* flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 50%; */
 
-
+/*
+ * Style for chart and video display
+ */
   @media only screen and (max-width:1440px) {
     #canvas{
       top: 50%;
-      left: 50%;
+      left: 45%;
     }
     #video{
       top: 50%;
-      left: 50%;
+      left: 45%;
     }
     #chart-container{
       position:absolute;
       width: 30%;
       height: 50%;
-      margin-left: 980px;
+      margin-left: 850px;
       top:48%;
     }
-   }
+  }
