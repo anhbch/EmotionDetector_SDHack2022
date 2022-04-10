@@ -1,7 +1,8 @@
+let myInterval = null;
 
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
-    setInterval(function () {
+    myInterval = setInterval(function () {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
 
@@ -25,11 +26,13 @@ function startTimer(duration, display) {
     }, 1000);
 };
 
-window.addEventListener('click',function () {
+document.getElementById("start").onclick = function() {
     var time = 30 * 60, // your time in seconds here
     display = document.querySelector('#clock');
     startTimer(time, display);
-});
+};
+
+
 
 
 
