@@ -126,3 +126,21 @@ body {
       top:48%;
     }
   }
+
+  @media only screen and (min-width:1440px) {
+    #canvas{
+      top: 50%;
+      left: 55%;
+    }
+    #video{
+      top: 50%;
+      left: 55%;
+    }
+    #chart-container{
+      position:absolute;
+      width: 30%;
+      height: 40%;
+      margin-left: 1300px;
+      top:50%;
+    }
+  }
