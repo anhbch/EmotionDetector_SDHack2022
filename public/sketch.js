@@ -4,6 +4,15 @@ let detections = [];
 let video;
 let canvas;
 let faceOptions;
+
+let happy_count = 0;
+let sad_count = 0;
+let angry_count = 0;
+
+let happy_sum = 0;
+let sad_sum = 0;
+let angry_sum = 0;
+
 function setup() {
   canvas = createCanvas(480, 360);
   canvas.id("canvas");
@@ -113,14 +122,24 @@ async function drawExpressions(detections, x, y, textYSpace){
      * Collect emotion data
      */
     const data = {happy, angry, sad};
-    localStorage.setItem("happy",nf(happy*100, 2, 2));
-    localStorage.setItem("sad",nf(sad*100, 2, 2));
-    localStorage.setItem("angry",nf(angry*100, 2, 2));
-
     /**
      * local storage
      */
-    localStorage.
+    if(happy >= 0.20){
+      happy_count += 1;
+      happy_sum += happy;
+    }
+    if(sad >= 0.20){
+      sad_count += 1;
+      sad_sum += sad;
+    }
+    if(angry >= 0.1){
+      angry_count += 1;
+      angry_sum += angry;
+    }
+    localStorage.setItem("overall_happy",happy_sum/happy_count);
+    localStorage.setItem("overall_sad",sad_sum/sad_count);
+    localStorage.setItem("overall_angry",angry_sum/angry_count);
     // const options ={
     //   method: 'POST',
     //   headers: {
