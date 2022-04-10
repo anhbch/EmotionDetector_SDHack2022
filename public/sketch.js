@@ -124,7 +124,7 @@ async function drawExpressions(detections, x, y, textYSpace){
       sad_count += 1;
       sad_sum += sad;
     }
-    if(angry >= 0.1){
+    if(angry >= 0){
       angry_count += 1;
       angry_sum += angry;
     }

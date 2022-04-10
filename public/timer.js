@@ -1,4 +1,20 @@
 let myInterval = null;
+// let songs = [
+//     "https://open.spotify.com/embed/track/6mry9fDj4oTFudQAMRo1lV?utm_source=generator",
+//     "https://open.spotify.com/embed/track/3AE6zraO6sukye0pu175Ca?utm_source=generator",
+//     "https://open.spotify.com/embed/track/3AE6zraO6sukye0pu175Ca?utm_source=generator",
+//     "https://open.spotify.com/embed/track/3AE6zraO6sukye0pu175Ca?utm_source=generator"
+// ]
+// let el = document.createElement('iframe');
+// //set attrs
+// el.setAttribute('width','60%');
+// el.setAttribute('height','200');
+// el.setAttribute('frameBorder','0');
+// el.setAttribute('allow','autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture');
+// el.setAttribute('style','border-radius:12px');
+
+
+
 
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
@@ -17,37 +33,37 @@ function startTimer(duration, display) {
         // }
         // timer--;
         if (--timer < 0) {
-            timer = 0
+            timer = 0;
         }
         // Need to update after calculate emotion
         if (timer === 0) {
             // alert('sorry, out of time');
             clearInterval(timer);
-
             //Call getDomEmotion
             let domEmotion = getDomEmotion();
             let arr = Object.keys(domEmotion);
             document.getElementById("emotion").innerHTML = "You were "  + arr[0].toUpperCase().bold();
 
             // Sugesstions
-            if (arr[0].toString() === 'angry') {
-                document.getElementById("sugesstion").innerHTML = "Suggestion: Let's take some time out, give you a short break if you feel stressful."
-                document.getElementById("suggestion").innerHTML = "A few moments of quiet time might help you feel better prepared to handle what's ahead without getting irritated or angry. You got this!";
-            }
-            else if (arr[0].toString() === 'happy') {
-                document.getElementById("sugesstion").innerHTML = "Suggestion: Let's take a 10-minute break after start a new task. You did a great job!";
-            }
-            else {
-                document.getElementById("sugesstion").innerHTML = "Suggestion: Let's take a break from your task. Allow yourself to be sad, it's okay!";
-                document.getElementById("sugesstion").innerHTML = "Denying such feelings may force them underground, where they can do more damage with time. Cry if you feel like it. Notice if you feel relief after the tears stop.";
-            }
+            // if (arr[0].toString() === 'angry') {
+            //     document.getElementById("sugesstion").innerHTML = "Suggestion: Let's take some time out, give you a short break if you feel stressful."
+            //     document.getElementById("suggestion").innerHTML = "A few moments of quiet time might help you feel better prepared to handle what's ahead without getting irritated or angry. You got this!";
+            // }
+            // else if (arr[0].toString() === 'happy') {
+            //     document.getElementById("sugesstion").innerHTML = "Suggestion: Let's take a 10-minute break after start a new task. You did a great job!";
+            // }
+            // else {
+            //     document.getElementById("sugesstion").innerHTML = "Suggestion: Let's take a break from your task. Allow yourself to be sad, it's okay!";
+            //     document.getElementById("sugesstion").innerHTML = "Denying such feelings may force them underground, where they can do more damage with time. Cry if you feel like it. Notice if you feel relief after the tears stop.";
+            // }
         }
     }, 1000);
 };
 
 function start() {
-    var time = 10, // your time in seconds here
+    var time = 10; // your time in seconds here
     display = document.querySelector('#clock');
+    localStorage.clear();
     startTimer(time, display);
 };
 
@@ -60,6 +76,7 @@ function start() {
 
 function reset() {
     clearInterval(myInterval);
+    localStorage.clear();
     document.getElementById("clock").innerHTML = '30:00';
 };
 
