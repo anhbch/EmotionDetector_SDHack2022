@@ -1,5 +1,7 @@
 # Eemodoro - SDHacks 2022
 
+[Try it here](https://quocduyvu6262.github.io/EmotionDetector_SDHack2022/)
+
 ## Inspiration
 Two years of studying remotely undoubtedly take away students' studying flow and structure. For students who used to attend class in person, having a lack of structure might effectively affect their learning ability, and importantly, their motivation. We want to make student gain their studying flow and motivation, so we make Eemodoro.
 
