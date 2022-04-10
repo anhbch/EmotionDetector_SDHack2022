@@ -35,6 +35,9 @@ function start() {
 
 function pause() {
     clearInterval(myInterval);
+    document.getElementById("clock").innerHTML = document.querySelector('#clock');
+    display = document.querySelector('#clock');
+    startTimer(time, display);
 };
 
 function reset() {
