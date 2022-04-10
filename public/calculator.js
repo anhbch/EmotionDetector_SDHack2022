@@ -36,21 +36,18 @@ function getData(){
     })
     
     const average = (array) => array.reduce((a, b) => a + b) / array.length;
-    
+    const fs = require('fs')
+  
+    // Data which will write in a file.
+    let toWrite = null;
     setTimeout(function() {
         sortable.push(['happy', average(datas_happy)]);
         sortable.push(['sad', average(datas_sad)]);
-        sortable.push(['angry', average(datas_angry)]);
+        sortable.push(['angry', average(datas_angry)]); 
         sortable.sort(function(a,b){
             return a[1] - b[1];
         });
-        console.log(sortable);
-        return sortable;
     }, 1000);
 }
 
-function change(){
-    getData();
-}
-change();
-
+getData();
