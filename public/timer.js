@@ -1,6 +1,6 @@
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
-    setInterval(function () {
+    myInterval = setInterval(function () {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
 
@@ -26,5 +26,10 @@ window.onload = function start() {
         display = document.querySelector('#clock');
     startTimer(time, display);
 };
+
+function stop() {
+    //enable button
+    clearInterval(myInterval);
+}
 
 
